@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/pera"
+    android:alpha="0.8"
+    tools:context="com.karl.xpense.ComputeActivity">
+
+
+
+    <TextView
+        android:id="@+id/BudgetTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Budget for the Day:"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/DateTxt"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/DateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/BudgetTxt"
+        android:layout_alignStart="@+id/BudgetTxt" />
+
+    <TextView
+        android:id="@+id/PersonalETxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Personal:"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/PersonalV"
+        android:layout_alignLeft="@+id/TranspoETxt"
+        android:layout_alignStart="@+id/TranspoETxt" />
+
+    <TextView
+        android:id="@+id/UtilityETxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Utilities:"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/PersonalETxt"
+        android:layout_alignLeft="@+id/PersonalETxt"
+        android:layout_alignStart="@+id/PersonalETxt"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:id="@+id/FoodETxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Food:"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/PersonalETxt"
+        android:layout_alignStart="@+id/PersonalETxt" />
+
+    <TextView
+        android:id="@+id/TranspoETxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Transportation:"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/UtilityETxt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXPENSES"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="61dp"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/BudgetTxt"
+        android:layout_alignLeft="@+id/FoodETxt"
+        android:layout_alignStart="@+id/FoodETxt" />
+
+
+    <Button
+        android:id="@+id/btnCompute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Compute"
+        android:text="Compute"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_alignTop="@+id/btnBack"
+        android:layout_alignRight="@+id/UtilityV"
+        android:layout_alignEnd="@+id/UtilityV"
+        android:layout_marginRight="34dp"
+        android:layout_marginEnd="34dp" />
+
+    <EditText
+        android:id="@+id/DateV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="mm/dd/yy"
+        android:ems="5"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textColorHint="@android:color/white"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_alignBaseline="@+id/DateTxt"
+        android:layout_alignBottom="@+id/DateTxt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/BudgetV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0.00"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/DateTxt"
+        android:layout_alignLeft="@+id/DateV"
+        android:layout_alignStart="@+id/DateV"
+        android:ems="5"/>
+
+    <EditText
+        android:id="@+id/FoodV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0.00"
+        android:maxLength="100"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textAlignment="center"
+        android:ems="5"
+        android:textStyle="bold"
+        android:layout_above="@+id/TranspoV"
+        android:layout_alignLeft="@+id/BudgetV"
+        android:layout_alignStart="@+id/BudgetV" />
+
+    <EditText
+        android:id="@+id/PersonalV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0.00"
+        android:ems="5"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/FoodV"
+        android:layout_alignStart="@+id/FoodV" />
+
+    <EditText
+        android:id="@+id/UtilityV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0.00"
+        android:ems="5"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/UtilityETxt"
+        android:layout_alignLeft="@+id/TranspoV"
+        android:layout_alignStart="@+id/TranspoV" />
+
+    <EditText
+        android:id="@+id/TranspoV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0.00"
+        android:ems="5"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/PersonalETxt"
+        android:layout_alignLeft="@+id/FoodV"
+        android:layout_alignStart="@+id/FoodV" />
+
+    <ImageButton
+
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        android:id="@+id/btnBack"
+        android:onClick="Home"
+        android:text="Go Back"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/UtilityV"
+        android:layout_toRightOf="@+id/DateTxt"
+        android:layout_toEndOf="@+id/DateTxt" />
+
+
+</RelativeLayout>
